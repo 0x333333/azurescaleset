@@ -46,6 +46,12 @@
       "metadata": {
         "description": "Admin password on all VMs."
       }
+    },
+    "nginxConf": {
+      "type": "string",
+      "metadata": {
+        "description": "Nginx configuration blob URI."
+      }
     }
   },
   "variables": {
