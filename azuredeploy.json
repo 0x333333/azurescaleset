@@ -356,9 +356,9 @@
                   "metricName": "BytesTransmitted",
                   "metricNamespace": "",
                   "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
-                  "timeGrain": "PT10S",
+                  "timeGrain": "PT5M",
                   "statistic": "Average",
-                  "timeWindow": "PT10S",
+                  "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
                   "threshold": 200000000
@@ -367,7 +367,7 @@
                   "direction": "Increase",
                   "type": "ChangeCount",
                   "value": "1",
-                  "cooldown": "PT10S"
+                  "cooldown": "PT5M"
                 }
               },
               {
@@ -375,9 +375,9 @@
                   "metricName": "BytesTransmitted",
                   "metricNamespace": "",
                   "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
-                  "timeGrain": "PT10S",
+                  "timeGrain": "PT5M",
                   "statistic": "Average",
-                  "timeWindow": "PT10S",
+                  "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "LessThan",
                   "threshold": 200000000
@@ -386,7 +386,7 @@
                   "direction": "Decrease",
                   "type": "ChangeCount",
                   "value": "1",
-                  "cooldown": "PT10S"
+                  "cooldown": "PT5M"
                 }
               }
             ]
