@@ -294,7 +294,7 @@
                     ]
                   },
                   "protectedSettings": {
-                    "commandToExecute": "[concat('bash ', parameters('scriptFileName'), ' ', parameters('nginxConf')]"
+                    "commandToExecute": "[concat('bash ', parameters('scriptFileName'), ' ', parameters('nginxConf'))]"
                   }
                 }
               }
