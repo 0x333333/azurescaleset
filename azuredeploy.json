@@ -361,7 +361,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "GreaterThan",
-                  "threshold": 200000000
+                  "threshold": 2000000
                 },
                 "scaleAction": {
                   "direction": "Increase",
@@ -380,7 +380,7 @@
                   "timeWindow": "PT5M",
                   "timeAggregation": "Average",
                   "operator": "LessThan",
-                  "threshold": 200000000
+                  "threshold": 1000000
                 },
                 "scaleAction": {
                   "direction": "Decrease",
