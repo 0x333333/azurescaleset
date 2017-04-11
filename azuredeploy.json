@@ -353,7 +353,7 @@
             "rules": [
               {
                 "metricTrigger": {
-                  "metricName": "BytesTransmitted",
+                  "metricName": "Network Out",
                   "metricNamespace": "",
                   "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
                   "timeGrain": "PT5M",
@@ -372,7 +372,7 @@
               },
               {
                 "metricTrigger": {
-                  "metricName": "BytesTransmitted",
+                  "metricName": "Network Out",
                   "metricNamespace": "",
                   "metricResourceUri": "[concat('/subscriptions/',subscription().subscriptionId, '/resourceGroups/',  resourceGroup().name, '/providers/Microsoft.Compute/virtualMachineScaleSets/', variables('namingInfix'))]",
                   "timeGrain": "PT5M",
