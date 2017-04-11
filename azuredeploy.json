@@ -52,6 +52,27 @@
       "metadata": {
         "description": "Nginx configuration blob URI."
       }
+    },
+    "scriptFileName": {
+      "type": "string",
+      "metadata": {
+        "description": "the file name of the script configuring the VMs in the scale set"
+      },
+      "defaultValue": "configuration.sh"
+    },
+    "_artifactsLocation": {
+      "type": "string",
+      "metadata": {
+        "description": "The base URI where artifacts required by this template are located. When the template is deployed using the accompanying scripts, a private location in the subscription will be used and this value will be automatically generated."
+      },
+      "defaultValue": "https://raw.githubusercontent.com/zp-j/azurescaleset/master"
+    },
+    "_artifactsLocationSasToken": {
+      "type": "securestring",
+      "metadata": {
+        "description": "The sasToken required to access _artifactsLocation.  When the template is deployed using the accompanying scripts, a sasToken will be automatically generated."
+      },
+      "defaultValue": ""
     }
   },
   "variables": {
