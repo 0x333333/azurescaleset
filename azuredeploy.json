@@ -4,7 +4,7 @@
   "parameters": {
     "vmSku": {
       "type": "string",
-      "defaultValue": "Standard_A1",
+      "defaultValue": "Standard_A2",
       "metadata": {
         "description": "Size of VMs in the VM Scale Set."
       }
@@ -347,7 +347,7 @@
             "name": "Profile1",
             "capacity": {
               "minimum": "1",
-              "maximum": "10",
+              "maximum": "[parameters('instanceCount')]",
               "default": "1"
             },
             "rules": [
