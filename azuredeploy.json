@@ -4,7 +4,7 @@
   "parameters": {
     "vmSku": {
       "type": "string",
-      "defaultValue": "Standard_D2_v2",
+      "defaultValue": "Standard_A2",
       "metadata": {
         "description": "Size of VMs in the VM Scale Set."
       }
@@ -76,6 +76,7 @@
     }
   },
   "variables": {
+    "storageAccountName": "[concat(uniquestring(resourceGroup().id), 'storageAccountName']",
     "namingInfix": "[toLower(substring(concat(parameters('vmssName'), uniqueString(resourceGroup().id)), 0, 9))]",
     "longNamingInfix": "[toLower(parameters('vmssName'))]",
     "addressPrefix": "10.0.0.0/16",
@@ -267,7 +268,10 @@
         "virtualMachineProfile": {
           "storageProfile": {
             "osDisk": {
-              "createOption": "FromImage"
+              "createOption": "FromImage",
+              "name": "[variables('osDiskName')]",
+              "caching": "ReadOnly",
+              "osType": "Linux"
             },
             "imageReference": "[variables('imageReference')]"
           },
