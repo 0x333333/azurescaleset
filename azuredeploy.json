@@ -269,7 +269,7 @@
           "storageProfile": {
             "osDisk": {
               "createOption": "FromImage",
-              "name": "[variables('osDiskName')]",
+              "name": "diskName",
               "caching": "ReadOnly",
               "osType": "Linux"
             },
